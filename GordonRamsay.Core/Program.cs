@@ -6,7 +6,7 @@ namespace GordonRamsay.Core
     {
         static void Main(string[] args)
         {
-            Recipe cake = new Recipe(name: "Kuchen", instructions: "Gut Kochen!", preparation: 15, time: 20)
+            var cake = new Recipe(name: "Kuchen", instructions: "Gut Backen!", preparation: 15, time: 20)
             {
                 Ingredients = new List<Ingredient>
                 {
@@ -14,11 +14,21 @@ namespace GordonRamsay.Core
                     new Ingredient {IngredientName = "Eier", Quantity = 3}
                 }
             };
+
+            var cooky = new Recipe(name: "Cookies", instructions: "Sehr Gut Backen", preparation: 20, time: 30)
+            {
+                Ingredients = new List<Ingredient>
+                {
+                    new Ingredient {IngredientName = "blah", Quantity = 300},
+                }
+            };
             
             // cake.Ingredients.Add(new Ingredient {IngredientName = "Mehl", Quantity = 200});
             
             cake.IngredientCheck();
             cake.ShowRecipe();
+            cooky.IngredientCheck();
+            cooky.ShowRecipe();
         }
     }
 }
