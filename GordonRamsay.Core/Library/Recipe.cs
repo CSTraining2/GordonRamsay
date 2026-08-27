@@ -18,14 +18,14 @@ class Recipe
 
     internal void ShowRecipe()
     {
-        Console.WriteLine($"Name: {RecipeName}, Ingredients: {Preparation}");
+        Console.WriteLine($"Name: {RecipeName}, Zutaten: {Preparation}");
 
         foreach (var ingredient in Ingredients)
         {
             Console.WriteLine($"{ingredient.Quantity}, {ingredient.IngredientName}");
         }
         
-        Console.WriteLine($"Instructions: {Instructions}");
+        Console.WriteLine($"Anleitung: {Instructions}");
     }
 
     internal void IngredientCheck()
