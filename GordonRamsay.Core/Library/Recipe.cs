@@ -22,7 +22,7 @@ class Recipe
 
         foreach (var ingredient in Ingredients)
         {
-            Console.WriteLine($"{ingredient.Quantity}, {ingredient.IngredientName}");
+            ingredient.PrintIngredient();
         }
         
         Console.WriteLine($"Anleitung: {Instructions}");
