@@ -6,6 +6,5 @@ class Ingredient
     internal int Quantity { get; init; }
     internal int Weight { get; set; }
 
-    internal void PrintIngredient() => Console.WriteLine($"Name: {IngredientName}, Menge: {Quantity}, Gewicht: {Weight}");
-    
+    internal string PrintIngredient() => $"Name: {IngredientName}, Menge: {Quantity}, Gewicht: {Weight}";
 }
