@@ -6,7 +6,7 @@ class Recipe
     private string Instructions { get; set; }
     private int Preparation { get; set; }
     protected int Time { get; set; }
-    internal List<Ingredient> Ingredients { get; } = [];
+    internal List<Ingredient> Ingredients { get; init; } = [];
 
     public Recipe(string name, string instructions, int preparation, int time)
     {
