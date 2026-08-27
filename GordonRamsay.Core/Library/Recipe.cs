@@ -28,6 +28,18 @@ class Recipe
         Console.WriteLine($"Anleitung: {Instructions}");
     }
 
+    internal bool IngredientLookUp(string name)
+    {
+        foreach (var ingredient in Ingredients)
+        {
+            if (ingredient.IngredientName == name)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     internal void IngredientCheck()
     {
         if (Ingredients.Count <= 0)

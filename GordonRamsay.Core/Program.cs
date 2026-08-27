@@ -10,8 +10,8 @@ namespace GordonRamsay.Core
             {
                 Ingredients = new List<Ingredient>
                 {
-                    new Ingredient { IngredientName = "Mehl", Quantity = 200 },
-                    new Ingredient {IngredientName = "Eier", Quantity = 3}
+                    new Ingredient { Id = 1, IngredientName = "Mehl", Quantity = 200 },
+                    new Ingredient { Id = 2, IngredientName = "Eier", Quantity = 3}
                 }
             };
 
@@ -19,10 +19,11 @@ namespace GordonRamsay.Core
             {
                 Ingredients = new List<Ingredient>
                 {
-                    new Ingredient {IngredientName = "blah", Quantity = 300},
+                    new Ingredient { Id = 3,IngredientName = "blah", Quantity = 300},
                 }
             };
-            
+            bool found = cake.IngredientLookUp("Mehl");
+            Console.WriteLine($"Gefunden: {found}");
             // cake.Ingredients.Add(new Ingredient {IngredientName = "Mehl", Quantity = 200});
             
             cake.IngredientCheck();
